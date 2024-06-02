@@ -45,7 +45,6 @@ const LoadMenu = (restaurant) => {
     pageArray.push(page)
   }
 
-
   const logo = Logo(business, restaurant.logo, styling)
   AddToPage(logo)
 
