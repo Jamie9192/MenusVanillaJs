@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - name: Pull Changes from Git
+      command: git pull origin main
