@@ -14,7 +14,7 @@ const CategoryHeader = (label, styling) => {
 const CategoryPrice = (price, styling) => {
   const div = document.createElement('div');
   Object.assign(div.style, styling.categoryPrice);
-  div.textContent = price;
+  div.textContent = price && price.toLocaleString('en-GB', { style: 'currency', currency: 'GBP' });
   return div;
 }
 
@@ -26,18 +26,17 @@ const CategoryDescription = (description, styling) => {
 }
 
 
-export const Category = (label, data, styling, layout, parent) => {
+export const Category = (label, data, styling, layout) => {
   const div = document.createElement('div');
   div.classList.add('category');
   Object.assign(div.style, styling.category);
   div.style.width = calculateWidthFlex(layout.colsPerPage || 1)
-  parent.append(div);
 
   const header = CategoryHeader(label, styling);
   div.append(header);
 
   const price = CategoryPrice(data.price, styling);
-  header.append(price);
+  // header.append(price);
 
   const description = CategoryDescription(data.description, styling);
   div.append(description);

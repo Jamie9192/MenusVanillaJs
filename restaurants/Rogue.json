@@ -1,13 +1,21 @@
 {
+  "logo": "Logo2.svg",
+  "colorPalette": {
+    "primary": "#D93275",
+    "secondary": "#000000",
+    "background": "#000000",
+    "text": "#FFFFFF",
+    "off-white": "#BBBBBB"
+  },
   "layout": {
-    "pages": 3,
+    "pages": 1,
     "columns": 2,
     "colsPerPage": 1
   },
   "styling": {
     "logoContainer" : {
       "width" : "100%",
-      "height" : "30mm"
+      "height" : "20mm"
     },
     "logo" : {
       "width" : "100%",
@@ -15,35 +23,39 @@
       "object-fit" : "contain"
     },
     "category": {
-      "backgroundColor": "black",
+      "backgroundColor": "rgba(0, 0, 0, 0.5)",
       "color": "white",
       "display": "flex",
       "flexDirection": "column",
-      "margin": "2mm"
+      "backdropFilter": "blur(0.25rem)"
     },
     "categoryHeader": {
       "display" : "flex",
       "flexDirection" : "row",
       "gap" : "var(--mantine-spacing-xs)",
       "justifyContent" : "space-between",
-      "backgroundColor" : "#D93275",
+      "backgroundColor" : "var(--clr-primary)",
+      "marginBottom" : "0.5rem",
+      "borderRadius" : "0.5rem",
       "alignItems" : "center"
     },
     "categoryName": {
-      "color" : "black",
+      "color" : "var(--clr-text)",
+      "display": "absolute",
       "width" : "100%",
-      "fontSize" : "1.25rem" ,
+      "fontSize" : "1.75rem" ,
       "textAlign" : "center",
-      "fontWeight" : "bold"
+      "fontFamily" : "BufallyScript",
+      "textShadow" : "2px 2px 2px black"
     },
     "categoryPrice": {
       "color" : "white",
-      "fontSize" : "var(--mantine-font-size-lg)",
-      "padding" : "0 var(--mantine-spacing-xl)"
+      "fontSize" : "1rem"
     },
     "categoryDescription": {
-      "color" : "white",
+      "color" : "var(--clr-off-white)",
       "textAlign" : "center",
+      "marginBottom": "0.5rem",
       "fontSize" : "1.1rem"
       },
     "dishContainer": {
@@ -60,19 +72,18 @@
       "gridRow": "span 3"
     },
     "dishName": {
-      "color" : "#D93275",
+      "color" : "var(--clr-primary)",
       "textTransform" : "uppercase",
-      "fontSize" : "1.2rem)",
+      "fontSize" : "1.2rem",
       "fontWeight" : "bolder",
       "gridRow": "1"
-
     },
     "dishPrice": {
       "color" : "white"
     },
     "dishDescription": {
       "color" : "white",
-      "fontSize" : "0.8rem",
+      "fontSize" : "1rem",
       "gridRow": "2/2"
     },
     "page": {
@@ -81,7 +92,12 @@
       "flexDirection": "column",
       "gap": "3mm",
       "flexWrap": "wrap",
-      "backgroundColor": "black"
+      "fontFamily": "Roboto, sans-serif",
+      "backgroundImage": "url('assets/Rogue/background.jpeg')",
+      "backgroundColor": "black",
+      "backgroundSize": "cover",
+      "backgroundPosition": "center",
+      "backgroundRepeat": "no-repeat"
     },
     "pages": {
       "display": "grid",
@@ -117,8 +133,7 @@
       }
     },
     "Hot Chocolates": {
-      "page": 0,
-      "position": 1,
+      "price": 3.5,
       "description": "Delicious hot chocolate creations",
       "dishes": {
         "Smoreo": {
@@ -140,8 +155,7 @@
       }
     },
     "Shakes": {
-      "page": 1,
-      "position": 0,
+      "price": 4,
       "description": "Indulgent milkshakes",
       "dishes": {
         "Rogueo": {

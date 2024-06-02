@@ -49,7 +49,7 @@
     "dishContainer": {
       "display": "grid",
       "gridTemplateColumns": "repeat(2, 1fr)",
-      "gap": "0.5rem",
+      "gap": "0.25rem 1rem",
       "padding" : "0.5rem"
     },
     "dish": {
@@ -59,20 +59,39 @@
       "gridTemplateRows": "subgrid",
       "gridRow": "span 3"
     },
+    "dishHeader": {
+      "display" : "flex",
+      "flexDirection" : "row",
+      "justifyContent" : "space-between",
+      "backgroundColor" : "black",
+      "alignItems" : "start",
+      "height" : "min-content",
+      "marginTop" : "0.5rem"
+    },
     "dishName": {
       "color" : "orange",
       "textTransform" : "uppercase",
-      "fontSize" : "1.2rem)",
+      "fontSize" : "0.9rem",
       "fontWeight" : "bolder",
       "gridRow": "1"
-
     },
     "dishPrice": {
-      "color" : "white"
+      "color" : "white",
+      "float": "right",
+      "paddingLeft" : "0.5rem"
     },
     "dishDescription": {
       "color" : "white",
       "fontSize" : "0.8rem",
+      "gridRow": "3/3",
+      "display" : "flex",
+      "justifyContent" : "space-between",
+      "flexWrap" : "wrap"
+
+    },
+    "dietary": {
+      "color" : "white",
+      "fontSize" : "0.5rem",
       "gridRow": "2/2"
     },
     "page": {
@@ -93,7 +112,7 @@
   },
   "menu": {
     "Breakfasts": {
-      "description": "served til 1pm",
+      "description": "Served til 1pm",
       "dishes": {
         "Full Scottish": {
           "price": 7,
@@ -106,8 +125,8 @@
       }
     },
     "Breakfast Rolls": {
-      "description": "served til 1pm",
-      "additional_info": "DOUBLE UP FOR £1",
+      "description": "Served til 1pm",
+      "additional_info": "Double up for 50p",
       "dishes": {
         "Sausage / Links": {
           "price": 2.50
@@ -118,17 +137,23 @@
         "Black Pudding": {
           "price": 2.50
         },
-        "Potato Scone (x2) (v)": {
+        "Potato Scone (x2)": {
           "price": 2.50,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
-        "Fried Egg (v)": {
+        "Fried Egg": {
           "price": 2.50,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
-        "Scrambled Egg (v)": {
+        "Scrambled Egg": {
           "price": 2.50,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         }
       }
     },
@@ -150,7 +175,7 @@
       }
     },
     "Soup": {
-      "description": "SERVED WITH A ROLL",
+      "description": "Serverd with a roll",
       "dishes": {
         "Soup Of The Day": {
           "price": 3
@@ -158,23 +183,27 @@
       }
     },
     "Omelette": {
-      "description": "SERVED WITH CHIPS OR SALAD",
+      "description": "Served with chips or salad",
       "dishes": {
-        "Plain (v)": {
+        "Plain": {
           "price": 6,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
         "Ham And Cheese": {
           "price": 6
         },
-        "Cheese And Onion (v)": {
+        "Cheese And Onion": {
           "price": 6,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         }
       }
     },
     "Wraps & Turkish Panini": {
-      "description": "ADD CHIPS (£2)",
+      "description": "Add chips (£2)",
       "dishes": {
         "Mexicano": {
           "price": 5.50,
@@ -212,10 +241,12 @@
           "price": 5.50,
           "description": "chicken, cheese, red onion, peppers and buffalo sauce"
         },
-        "Turkish (v)": {
+        "Turkish": {
           "price": 5.50,
           "description": "falafel, hummus, lettuce and red onion",
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
         "Scottish": {
           "price": 5.50,
@@ -226,9 +257,11 @@
     "Starters": {
       "description": "",
       "dishes": {
-        "Mozzarella Sticks (v)": {
+        "Mozzarella Sticks": {
           "price": 6,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
         "Buffalo Tenders": {
           "price": 6
@@ -236,33 +269,44 @@
         "Haggis Bon Bon": {
           "price": 6
         },
-        "Garlic Bread & Cheese (v)": {
+        "Garlic Bread & Cheese": {
           "price": 4,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
-        "Potato Wedges (v)": {
+        "Potato Wedges": {
           "price": 4,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         }
       }
     },
     "Chips": {
       "description": "",
-      "additional_info": "ADD CHEESE (v) £1  ADD CURRY (v) £1",
+      "additional_info": "ADD CHEESE £1  ADD CURRY £1",
       "dishes": {
         "Chips": {
           "price": 3,
-          "description": "small"
+          "description": "small",
+          "dietary": {
+            "vegetarian" : true
+          }
         },
-        "Chips & Cheese (v)": {
+        "Chips & Cheese": {
           "price": 4,
           "description": "small",
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
         "Chips & Curry": {
           "price": 4,
           "description": "small",
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         }
       }
     },
@@ -296,7 +340,7 @@
       }
     },
     "Salads": {
-      "description": "ALL SALADS SERVED WITH ROASTED PEPPERS, RED ONION & COS LETTUCE",
+      "description": "All salads served with roasted peppers, red onion & cos lettuce",
       "dishes": {
         "Chicken Caesar": {
           "price": 8.50,
@@ -306,10 +350,12 @@
           "price": 8.50,
           "description": "mixed peppers, cucumber, tomatoes and our homemade honey mustard dressing"
         },
-        "Pesto Pasta (v)": {
+        "Pesto Pasta": {
           "price": 8.50,
           "description": "pesto, pine nuts, parmesan cheese and balsamic dressing",
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         },
         "The Works": {
           "price": 9,
@@ -327,10 +373,12 @@
           "price": 8.50,
           "description": "chicken breast, red onion, peppers and BBQ sauce"
         },
-        "Falafel & Hummus (v)": {
+        "Falafel & Hummus": {
           "price": 8.50,
           "description": "falafel, hummus, cucumber, tomato, red onion and tahini dressing",
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         }
       }
     },
@@ -362,9 +410,11 @@
         "Jam Sandwich": {
           "price": 3.50
         },
-        "Cucumber Sticks & Dip (v)": {
+        "Cucumber Sticks & Dip": {
           "price": 3.50,
-          "vegetarian": true
+          "dietary": {
+            "vegetarian" : true
+          }
         }
       }
     },

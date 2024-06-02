@@ -25,3 +25,10 @@ body {
   overflow: hidden;
   page-break-after: always;
 }
+
+@font-face {
+  font-family: 'BufallyScript';
+  src: url('assets/Typefaces/Bufally.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
