@@ -1,19 +1,24 @@
+import { createElement } from '../functions/elementCreate.js';
+
 export const Logo = (business, str, styling) => {
-  const div = document.createElement('div');
-  if (!str) return div;
-  div.classList.add('logo');
-  Object.assign(div.style, styling.logoContainer);
+  if (!str) return;
+  styling.logoContainer.width = styling.layout.colElWidth || "100%";
+  const div = createElement('div', styling.logoContainer, "logo");
 
   const path = `../assets/${business}/${str}`;
 
-  console.log(path);
+  const addStyling = {
+    width : "100%",
+    height :  '100%',
+    objectFit : 'contain',
+  }
 
-  const img = document.createElement('img');
-  Object.assign(img.style, styling.logo);
+  Object.assign(styling.logo, addStyling);
+
+  const img = createElement('img', styling.logo);
   img.src = path;
-  img.style.width = '100%';
-  img.style.height = '100%';
-  img.style.objectFit = 'contain';
+
+  Object.assign(img.style, styling.logo);
 
   div.append(img);
 

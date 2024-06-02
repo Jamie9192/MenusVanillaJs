@@ -1,4 +1,6 @@
-const business = "Rogue";
+const business = "Vinos";
+
+import { calculateWidthFlex } from '../functions/calculate.js';
 
 import { Logo } from './components/Logo.js';
 import { Pages } from './components/Pages.js';
@@ -31,6 +33,8 @@ const LoadMenu = (restaurant) => {
   const { layout, colorPalette, styling, menu } = restaurant;
   const { pages } = layout;
 
+  document.documentElement.style.fontSize = layout.baseFontSize || '16px';
+
   if (colorPalette) {
     Object.entries(colorPalette).forEach(([key, value]) => {
       document.documentElement.style.setProperty(`--clr-${key}`, value);
@@ -44,6 +48,9 @@ const LoadMenu = (restaurant) => {
     const page = Page(styling, pagesContainer)
     pageArray.push(page)
   }
+  console.log(styling)
+  styling.layout = styling.layout || {}
+  styling.layout.colElWidth = calculateWidthFlex(layout.colsPerPage || 1)
 
   const logo = Logo(business, restaurant.logo, styling)
   AddToPage(logo)

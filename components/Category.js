@@ -1,48 +1,45 @@
+import { createElement } from '../functions/elementCreate.js';
+
 import { Dish } from './Dish.js';
-import { calculateWidthFlex } from '../functions/calculate.js';
 
 const CategoryHeader = (label, styling) => {
-  const div = document.createElement('div');
-  Object.assign(div.style, styling.categoryHeader);
-  const nameDiv = document.createElement('div');
+
+  const div = createElement('div', styling.categoryHeader);
+  const nameDiv = createElement('div', styling.categoryName);
+
   nameDiv.textContent = label;
-  Object.assign(nameDiv.style, styling.categoryName);
   div.append(nameDiv);
   return div;
 }
 
 const CategoryPrice = (price, styling) => {
-  const div = document.createElement('div');
-  Object.assign(div.style, styling.categoryPrice);
+  const div = createElement('div', styling.categoryPrice);
   div.textContent = price && price.toLocaleString('en-GB', { style: 'currency', currency: 'GBP' });
   return div;
 }
 
 const CategoryDescription = (description, styling) => {
-  const div = document.createElement('div');
-  Object.assign(div.style, styling.categoryDescription);
+  const div = createElement('div', styling.categoryDescription);
   div.textContent = description;
   return div;
 }
 
 
-export const Category = (label, data, styling, layout) => {
-  const div = document.createElement('div');
-  div.classList.add('category');
-  Object.assign(div.style, styling.category);
-  div.style.width = calculateWidthFlex(layout.colsPerPage || 1)
+export const Category = (label, data, styling) => {
+
+  styling.category.width = styling.layout.colElWidth || "100%";
+
+  const div = createElement('div', styling.category, 'category');
 
   const header = CategoryHeader(label, styling);
   div.append(header);
 
   const price = CategoryPrice(data.price, styling);
-  // header.append(price);
 
   const description = CategoryDescription(data.description, styling);
   div.append(description);
 
-  const dishDivContainer = document.createElement('div');
-  Object.assign(dishDivContainer.style, styling.dishContainer);
+  const dishDivContainer = createElement('div', styling.dishContainer);
   div.append(dishDivContainer);
 
   Object.entries(data.dishes).forEach((dish) => {

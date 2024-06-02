@@ -1,8 +1,8 @@
+import { createElement } from '../functions/elementCreate.js';
+
 export const Pages = (layout, styling, parent) => {
-  const div = document.createElement('div');
-  Object.assign(div.style, styling.pages);
-  div.classList.add('pages');
-  div.style = {
+
+  const addStyling= {
     display : 'grid',
     gridTemplateColumns : `repeat(${layout.columns}, 210mm)`,
     gridTemplateRows : `repeat(${Math.ceil(layout.pages/layout.columns)}, 297mm)`,
@@ -10,6 +10,12 @@ export const Pages = (layout, styling, parent) => {
     width : '100%',
     height : '100%',
   }
+
+  Object.assign(styling.pages, addStyling);
+
+  const div = createElement('div', styling.pages, "pages");
+
   parent.append(div)
+
   return div;
 }

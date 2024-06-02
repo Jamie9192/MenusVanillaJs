@@ -1,25 +1,31 @@
+import { createElement } from '../functions/elementCreate.js';
+
 const icons = {
-  vegetarian: { icon: '🍃' },
-  vegan: { icon: '🌱' },
-  containsNuts: { icon: '🥜' },
-  glutenFree: { icon: '🌾' },
-  dairyFree: { icon: '🥛' },
+  vegetarian: { label : 'Vegetarian', icon: '🌿', color: "darkgreen" },
+  vegan: { label : 'Vegan', icon: '🌱', color: "green" },
+  containsNuts: { label : 'Contains Nuts', icon: '🥜', color: "brown" },
+  glutenFree: { label : 'Gluten Free', icon: '🌾', color: "brown" },
+  dairyFree: {  label : 'Dairy Free', icon: '🥛', color: "blue" },
 }
 
 export const Dietary = (dietary, styling) => {
-  const div = document.createElement('div');
-  div.classList.add('dietary');
-  Object.assign(div.style, styling.dietary);
+
+  const div = createElement('div', styling.dietary, "dietary");
 
   if (!dietary) return div;
 
+  if (dietary.vegan) dietary.vegetarian = true;
+
   Object.entries(icons).forEach(([key, value]) => {
-    console.log(key, value)
     if (dietary[key]) {
-      const span = document.createElement('span');
-      span.textContent = value.icon;
-      span.style.fontSize = '1.5em';
-      span.style.marginRight = '0.5em';
+      const addStyling = {
+        fontSize: '0.55rem',
+        padding: '0.125rem 0.25rem',
+        borderRadius: '20rem',
+      }
+      const span = createElement('span', addStyling);
+      span.style.backgroundColor = value.color;
+      span.textContent = value.icon + ' ' + value.label;
       div.append(span);
     }
   })

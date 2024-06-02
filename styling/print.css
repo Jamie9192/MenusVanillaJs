@@ -1,0 +1,11 @@
+@page {
+  size: portrait;
+  margin: 0;
+  padding: 3mm;
+}
+
+@media print {
+  .page {
+    background-color: white;
+  }
+}

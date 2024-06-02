@@ -1,7 +1,7 @@
+import { createElement } from '../functions/elementCreate.js';
+
 export const Page = (styling, parent) => {
-  const div = document.createElement('div');
-  div.classList.add('page');
-  Object.assign(div.style, styling.page);
+  const div = createElement('div', styling.page, 'page');
   parent.append(div);
   return div;
 }

@@ -1,8 +1,16 @@
 {
   "layout": {
-    "pages": 3,
+    "pages": 4,
     "columns": 2,
+    "baseFontSize": "20px",
     "colsPerPage": 2
+  },
+  "colorPalette": {
+    "primary": "#FEDE4F",
+    "secondary": "#000000",
+    "background": "#383838",
+    "text": "#FFFFFF",
+    "off-white": "#BBBBBB"
   },
   "styling": {
     "logoContainer" : {
@@ -15,7 +23,7 @@
       "object-fit" : "contain"
     },
     "category": {
-      "backgroundColor": "black",
+      "backgroundColor": "var(--clr-background)",
       "color": "white",
       "display": "flex",
       "flexDirection": "column",
@@ -24,9 +32,8 @@
     "categoryHeader": {
       "display" : "flex",
       "flexDirection" : "row",
-      "gap" : "var(--mantine-spacing-xs)",
       "justifyContent" : "space-between",
-      "backgroundColor" : "orange",
+      "backgroundColor" : "var(--clr-primary)",
       "alignItems" : "center"
     },
     "categoryName": {
@@ -37,9 +44,7 @@
       "fontWeight" : "bold"
     },
     "categoryPrice": {
-      "color" : "white",
-      "fontSize" : "var(--mantine-font-size-lg)",
-      "padding" : "0 var(--mantine-spacing-xl)"
+      "color" : "white"
     },
     "categoryDescription": {
       "color" : "white",
@@ -48,28 +53,29 @@
       },
     "dishContainer": {
       "display": "grid",
-      "gridTemplateColumns": "repeat(2, 1fr)",
+      "gridTemplateColumns": "repeat(1, 1fr)",
       "gap": "0.25rem 1rem",
-      "padding" : "0.5rem"
+      "padding" : "0.5rem",
+      "maxWidth" : "100%",
+      "boxSizing" : "border-box"
     },
     "dish": {
       "backgroundColor" : "transparent",
       "width": "100%",
       "display": "grid",
+      "gap": 0,
       "gridTemplateRows": "subgrid",
       "gridRow": "span 3"
     },
     "dishHeader": {
-      "display" : "flex",
-      "flexDirection" : "row",
-      "justifyContent" : "space-between",
-      "backgroundColor" : "black",
+      "display" : "grid",
+      "gridTemplateColumns" : "1fr auto",
+      "gridTemplateRows" : "auto auto",
       "alignItems" : "start",
-      "height" : "min-content",
-      "marginTop" : "0.5rem"
+      "height" : "min-content"
     },
     "dishName": {
-      "color" : "orange",
+      "color" : "var(--clr-primary)",
       "textTransform" : "uppercase",
       "fontSize" : "0.9rem",
       "fontWeight" : "bolder",
@@ -100,7 +106,7 @@
       "flexDirection": "column",
       "gap": "3mm",
       "flexWrap": "wrap",
-      "backgroundColor": "black"
+      "backgroundColor": "var(--clr-background)"
     },
     "pages": {
       "display": "grid",
@@ -278,7 +284,7 @@
         "Potato Wedges": {
           "price": 4,
           "dietary": {
-            "vegetarian" : true
+            "vegan" : true
           }
         }
       }
@@ -289,21 +295,18 @@
       "dishes": {
         "Chips": {
           "price": 3,
-          "description": "small",
           "dietary": {
             "vegetarian" : true
           }
         },
         "Chips & Cheese": {
           "price": 4,
-          "description": "small",
           "dietary": {
             "vegetarian" : true
           }
         },
         "Chips & Curry": {
           "price": 4,
-          "description": "small",
           "dietary": {
             "vegetarian" : true
           }
