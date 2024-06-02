@@ -1,0 +1,166 @@
+{
+  "layout": {
+    "pages": 3,
+    "columns": 2,
+    "colsPerPage": 1
+  },
+  "styling": {
+    "logoContainer" : {
+      "width" : "100%",
+      "height" : "30mm"
+    },
+    "logo" : {
+      "width" : "100%",
+      "height" : "100%",
+      "object-fit" : "contain"
+    },
+    "category": {
+      "backgroundColor": "black",
+      "color": "white",
+      "display": "flex",
+      "flexDirection": "column",
+      "margin": "2mm"
+    },
+    "categoryHeader": {
+      "display" : "flex",
+      "flexDirection" : "row",
+      "gap" : "var(--mantine-spacing-xs)",
+      "justifyContent" : "space-between",
+      "backgroundColor" : "#D93275",
+      "alignItems" : "center"
+    },
+    "categoryName": {
+      "color" : "black",
+      "width" : "100%",
+      "fontSize" : "1.25rem" ,
+      "textAlign" : "center",
+      "fontWeight" : "bold"
+    },
+    "categoryPrice": {
+      "color" : "white",
+      "fontSize" : "var(--mantine-font-size-lg)",
+      "padding" : "0 var(--mantine-spacing-xl)"
+    },
+    "categoryDescription": {
+      "color" : "white",
+      "textAlign" : "center",
+      "fontSize" : "1.1rem"
+      },
+    "dishContainer": {
+      "display": "grid",
+      "gridTemplateColumns": "repeat(2, 1fr)",
+      "gap": "0.5rem",
+      "padding" : "0.5rem"
+    },
+    "dish": {
+      "backgroundColor" : "transparent",
+      "width": "100%",
+      "display": "grid",
+      "gridTemplateRows": "subgrid",
+      "gridRow": "span 3"
+    },
+    "dishName": {
+      "color" : "#D93275",
+      "textTransform" : "uppercase",
+      "fontSize" : "1.2rem)",
+      "fontWeight" : "bolder",
+      "gridRow": "1"
+
+    },
+    "dishPrice": {
+      "color" : "white"
+    },
+    "dishDescription": {
+      "color" : "white",
+      "fontSize" : "0.8rem",
+      "gridRow": "2/2"
+    },
+    "page": {
+      "padding": "clamp(6mm, 2rem, 100%)",
+      "display": "flex",
+      "flexDirection": "column",
+      "gap": "3mm",
+      "flexWrap": "wrap",
+      "backgroundColor": "black"
+    },
+    "pages": {
+      "display": "grid",
+      "placeItems": "center",
+      "gap": "10mm",
+      "width": "100%",
+      "margin": "0 auto"
+    }
+  },
+  "menu": {
+    "Donuts": {
+      "price": 5,
+      "page": 0,
+      "position": 0,
+      "description": "Freshly made loaded donuts",
+      "dishes": {
+        "Rogues Delight": {
+          "price": null,
+          "description": "Fresh sugar donuts loaded with strawberry sauce, Jelly Beans, popping candy and a scoop of strawberry ice-cream"
+        },
+        "Holey Lotus": {
+          "price": null,
+          "description": "Fresh donuts loaded with cream and Biscoff crumble, with a warm Biscoff dipping pot"
+        },
+        "Chocolate Doughdream": {
+          "price": null,
+          "description": "Fresh sugar donuts loaded with cream, milk & white chocolate curls, white chocolate sauce and a warm milk chocolate dipping pot"
+        },
+        "Holey Cheesus": {
+          "price": null,
+          "description": "This one is for the ultimate rogue: Fresh donuts, cheese drizzle and a warm cheese dipping pot, with or without crispy onions. We double dare you..."
+        }
+      }
+    },
+    "Hot Chocolates": {
+      "page": 0,
+      "position": 1,
+      "description": "Delicious hot chocolate creations",
+      "dishes": {
+        "Smoreo": {
+          "price": null,
+          "description": "Galaxy hot chocolate topped with a toasted marshmallow fluff rim, loaded with vanilla ice cream, Oreo crumb & Hershey's chocolate sauce"
+        },
+        "Rogue Creation": {
+          "price": null,
+          "description": "Galaxy hot chocolate topped with marshmallow fluff, loaded with Jelly Beans, strawberry sauce and popping candy"
+        },
+        "Movie Night": {
+          "price": null,
+          "description": "Galaxy hot chocolate loaded with cream, caramel sauce, Maltesers & toffee popcorn"
+        },
+        "Teacake Treat": {
+          "price": null,
+          "description": "Galaxy hot chocolate with a toasted marshmallow rim and loaded with a Tunnocks teacake, cream & chocolate curls"
+        }
+      }
+    },
+    "Shakes": {
+      "page": 1,
+      "position": 0,
+      "description": "Indulgent milkshakes",
+      "dishes": {
+        "Rogueo": {
+          "price": null,
+          "description": "Vanilla ice cream shake loaded with Oreo, chocolate sauce, cream and a fresh donut"
+        },
+        "Biscoff Rogue": {
+          "price": null,
+          "description": "Vanilla ice cream shake loaded with Biscoff spread, Biscoff sauce, Biscoff crumble, cream and a Lotus biscuit"
+        },
+        "Milky Rogue": {
+          "price": null,
+          "description": "Vanilla ice cream shake loaded with white chocolate sauce, cream, white chocolate curls and white chocolate buttons"
+        },
+        "Jammy Rogue": {
+          "price": null,
+          "description": "Strawberry ice cream shake loaded with cream, shortbread crumble, strawberry sauce and Jammy Dodgers"
+        }
+      }
+    }
+  }
+}

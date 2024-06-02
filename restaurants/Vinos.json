@@ -1,0 +1,435 @@
+{
+  "layout": {
+    "pages": 3,
+    "columns": 2,
+    "colsPerPage": 2
+  },
+  "styling": {
+    "logoContainer" : {
+      "width" : "100%",
+      "height" : "30mm"
+    },
+    "logo" : {
+      "width" : "100%",
+      "height" : "100%",
+      "object-fit" : "contain"
+    },
+    "category": {
+      "backgroundColor": "black",
+      "color": "white",
+      "display": "flex",
+      "flexDirection": "column",
+      "margin": "2mm"
+    },
+    "categoryHeader": {
+      "display" : "flex",
+      "flexDirection" : "row",
+      "gap" : "var(--mantine-spacing-xs)",
+      "justifyContent" : "space-between",
+      "backgroundColor" : "orange",
+      "alignItems" : "center"
+    },
+    "categoryName": {
+      "color" : "black",
+      "width" : "100%",
+      "fontSize" : "1.25rem" ,
+      "textAlign" : "center",
+      "fontWeight" : "bold"
+    },
+    "categoryPrice": {
+      "color" : "white",
+      "fontSize" : "var(--mantine-font-size-lg)",
+      "padding" : "0 var(--mantine-spacing-xl)"
+    },
+    "categoryDescription": {
+      "color" : "white",
+      "textAlign" : "center",
+      "fontSize" : "1.1rem"
+      },
+    "dishContainer": {
+      "display": "grid",
+      "gridTemplateColumns": "repeat(2, 1fr)",
+      "gap": "0.5rem",
+      "padding" : "0.5rem"
+    },
+    "dish": {
+      "backgroundColor" : "transparent",
+      "width": "100%",
+      "display": "grid",
+      "gridTemplateRows": "subgrid",
+      "gridRow": "span 3"
+    },
+    "dishName": {
+      "color" : "orange",
+      "textTransform" : "uppercase",
+      "fontSize" : "1.2rem)",
+      "fontWeight" : "bolder",
+      "gridRow": "1"
+
+    },
+    "dishPrice": {
+      "color" : "white"
+    },
+    "dishDescription": {
+      "color" : "white",
+      "fontSize" : "0.8rem",
+      "gridRow": "2/2"
+    },
+    "page": {
+      "padding": "clamp(6mm, 2rem, 100%)",
+      "display": "flex",
+      "flexDirection": "column",
+      "gap": "3mm",
+      "flexWrap": "wrap",
+      "backgroundColor": "black"
+    },
+    "pages": {
+      "display": "grid",
+      "placeItems": "center",
+      "gap": "10mm",
+      "width": "100%",
+      "margin": "0 auto"
+    }
+  },
+  "menu": {
+    "Breakfasts": {
+      "description": "served til 1pm",
+      "dishes": {
+        "Full Scottish": {
+          "price": 7,
+          "description": "square sausage, egg, beans, potato scone, black pudding and bacon."
+        },
+        "Full Breakfast Wrap": {
+          "price": 7,
+          "description": "sausage, egg, beans, potato scone, black pudding, bacon and hash brown."
+        }
+      }
+    },
+    "Breakfast Rolls": {
+      "description": "served til 1pm",
+      "additional_info": "DOUBLE UP FOR £1",
+      "dishes": {
+        "Sausage / Links": {
+          "price": 2.50
+        },
+        "Bacon": {
+          "price": 2.50
+        },
+        "Black Pudding": {
+          "price": 2.50
+        },
+        "Potato Scone (x2) (v)": {
+          "price": 2.50,
+          "vegetarian": true
+        },
+        "Fried Egg (v)": {
+          "price": 2.50,
+          "vegetarian": true
+        },
+        "Scrambled Egg (v)": {
+          "price": 2.50,
+          "vegetarian": true
+        }
+      }
+    },
+    "Cold Rolls": {
+      "description": "",
+      "dishes": {
+        "Chicken Tikka": {
+          "price": 3
+        },
+        "Chicken Mayo": {
+          "price": 3
+        },
+        "Tuna Mayo": {
+          "price": 3
+        },
+        "Ham Salad": {
+          "price": 3
+        }
+      }
+    },
+    "Soup": {
+      "description": "SERVED WITH A ROLL",
+      "dishes": {
+        "Soup Of The Day": {
+          "price": 3
+        }
+      }
+    },
+    "Omelette": {
+      "description": "SERVED WITH CHIPS OR SALAD",
+      "dishes": {
+        "Plain (v)": {
+          "price": 6,
+          "vegetarian": true
+        },
+        "Ham And Cheese": {
+          "price": 6
+        },
+        "Cheese And Onion (v)": {
+          "price": 6,
+          "vegetarian": true
+        }
+      }
+    },
+    "Wraps & Turkish Panini": {
+      "description": "ADD CHIPS (£2)",
+      "dishes": {
+        "Mexicano": {
+          "price": 5.50,
+          "description": "chicken, cheese, red onion, lettuce, peppers and tomato"
+        },
+        "Italiano": {
+          "price": 5.50,
+          "description": "chicken, cheese, lettuce, red onion and mayo"
+        },
+        "Milano": {
+          "price": 5.50,
+          "description": "chicken, mozzarella, pesto and tomato"
+        },
+        "British": {
+          "price": 5.50,
+          "description": "ham and cheese"
+        },
+        "American": {
+          "price": 5.50,
+          "description": "chicken, cheese, red onion and bbq sauce"
+        },
+        "Chinese": {
+          "price": 5.50,
+          "description": "chicken, cheese, peppers, salt and chilli flakes and curry sauce"
+        },
+        "Thai": {
+          "price": 5.50,
+          "description": "chicken, cheese and sweet chilli sauce"
+        },
+        "Spanish": {
+          "price": 5.50,
+          "description": "chicken, cheese, jalapenos, red onions, peppers, lettuce and chipotle mayo"
+        },
+        "Texan": {
+          "price": 5.50,
+          "description": "chicken, cheese, red onion, peppers and buffalo sauce"
+        },
+        "Turkish (v)": {
+          "price": 5.50,
+          "description": "falafel, hummus, lettuce and red onion",
+          "vegetarian": true
+        },
+        "Scottish": {
+          "price": 5.50,
+          "description": "beef steak, yellow mustard, gherkins, fried onions and melted cheddar"
+        }
+      }
+    },
+    "Starters": {
+      "description": "",
+      "dishes": {
+        "Mozzarella Sticks (v)": {
+          "price": 6,
+          "vegetarian": true
+        },
+        "Buffalo Tenders": {
+          "price": 6
+        },
+        "Haggis Bon Bon": {
+          "price": 6
+        },
+        "Garlic Bread & Cheese (v)": {
+          "price": 4,
+          "vegetarian": true
+        },
+        "Potato Wedges (v)": {
+          "price": 4,
+          "vegetarian": true
+        }
+      }
+    },
+    "Chips": {
+      "description": "",
+      "additional_info": "ADD CHEESE (v) £1  ADD CURRY (v) £1",
+      "dishes": {
+        "Chips": {
+          "price": 3,
+          "description": "small"
+        },
+        "Chips & Cheese (v)": {
+          "price": 4,
+          "description": "small",
+          "vegetarian": true
+        },
+        "Chips & Curry": {
+          "price": 4,
+          "description": "small",
+          "vegetarian": true
+        }
+      }
+    },
+    "Pasta": {
+      "description": "",
+      "dishes": {
+        "Arribiata": {
+          "price": 9,
+          "description": "spicy tomato pasta with garlic and chilli flakes"
+        },
+        "Carbonara": {
+          "price": 9,
+          "description": "chicken and garlic in a creamy sauce"
+        },
+        "Rusticana": {
+          "price": 9,
+          "description": "chicken, peppers, red onion and garlic in a napoli sauce with a dash of cream"
+        },
+        "Bolognese": {
+          "price": 9,
+          "description": "traditional italian meat in a homemade ragu"
+        },
+        "Pesto Basilico": {
+          "price": 9,
+          "description": "chicken and sun blushed tomatoes and a dash of cream in our homemade basil pesto"
+        },
+        "Chicken Alfredo": {
+          "price": 9,
+          "description": "pan fried chicken, broccoli, mushrooms and double cream"
+        }
+      }
+    },
+    "Salads": {
+      "description": "ALL SALADS SERVED WITH ROASTED PEPPERS, RED ONION & COS LETTUCE",
+      "dishes": {
+        "Chicken Caesar": {
+          "price": 8.50,
+          "description": "chicken breast, parmesan cheese and Caesar dressing"
+        },
+        "Chunky Chicken & Veg": {
+          "price": 8.50,
+          "description": "mixed peppers, cucumber, tomatoes and our homemade honey mustard dressing"
+        },
+        "Pesto Pasta (v)": {
+          "price": 8.50,
+          "description": "pesto, pine nuts, parmesan cheese and balsamic dressing",
+          "vegetarian": true
+        },
+        "The Works": {
+          "price": 9,
+          "description": "chicken breast, ham, sausage, bacon, pepperoni and cheese"
+        },
+        "Tuna Nicoise": {
+          "price": 8.50,
+          "description": "tuna, olives, capers, chopped egg, tomato and French dressing"
+        },
+        "Spicy Chicken": {
+          "price": 8.50,
+          "description": "chicken breast, red onion, peppers, chilli flakes and our homemade spicy dressing"
+        },
+        "BBQ Chicken": {
+          "price": 8.50,
+          "description": "chicken breast, red onion, peppers and BBQ sauce"
+        },
+        "Falafel & Hummus (v)": {
+          "price": 8.50,
+          "description": "falafel, hummus, cucumber, tomato, red onion and tahini dressing",
+          "vegetarian": true
+        }
+      }
+    },
+    "Kids Menu": {
+      "description": "",
+      "dishes": {
+        "Chicken Nuggets & Chips": {
+          "price": 5.50
+        },
+        "Sausage & Chips": {
+          "price": 5.50
+        },
+        "Fish Fingers & Chips": {
+          "price": 5.50
+        },
+        "Cheese Burger & Chips": {
+          "price": 5.50
+        },
+        "Pasta & Cheese": {
+          "price": 4.50,
+          "description": "penne pasta with cheese sauce"
+        },
+        "Mini Hot Dog & Chips": {
+          "price": 4.50
+        },
+        "Beans on Toast": {
+          "price": 4.50
+        },
+        "Jam Sandwich": {
+          "price": 3.50
+        },
+        "Cucumber Sticks & Dip (v)": {
+          "price": 3.50,
+          "vegetarian": true
+        }
+      }
+    },
+    "Drinks": {
+      "description": "",
+      "dishes": {
+        "Irn Bru": {
+          "price": 1.50
+        },
+        "Coca Cola": {
+          "price": 1.50
+        },
+        "Diet Coke": {
+          "price": 1.50
+        },
+        "Fanta Orange": {
+          "price": 1.50
+        },
+        "Sprite": {
+          "price": 1.50
+        },
+        "Ginger Beer": {
+          "price": 1.50
+        },
+        "Tizer": {
+          "price": 1.50
+        },
+        "Lilt": {
+          "price": 1.50
+        },
+        "Sparkling Water": {
+          "price": 1
+        },
+        "Still Water": {
+          "price": 1
+        },
+        "Apple Juice": {
+          "price": 1.50
+        },
+        "Orange Juice": {
+          "price": 1.50
+        },
+        "Cranberry Juice": {
+          "price": 1.50
+        },
+        "Tea": {
+          "price": 1.50
+        },
+        "Coffee": {
+          "price": 1.50
+        },
+        "Latte": {
+          "price": 2
+        },
+        "Cappuccino": {
+          "price": 2
+        },
+        "Hot Chocolate": {
+          "price": 2
+        },
+        "Milkshake": {
+          "price": 2.50,
+          "description": "chocolate, strawberry or vanilla"
+        }
+      }
+    }
+  }
+}
