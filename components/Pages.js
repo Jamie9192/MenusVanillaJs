@@ -4,9 +4,8 @@ export const Pages = (layout, styling, parent) => {
 
   const addStyling= {
     display : 'grid',
-    gridTemplateColumns : `repeat(${layout.columns}, 210mm)`,
-    gridTemplateRows : `repeat(${Math.ceil(layout.pages/layout.columns)}, 297mm)`,
-    gap : '1em',
+    gridTemplateColumns : `repeat(${layout.columns}, ${layout.width})`,
+    gridTemplateRows : `repeat(${Math.ceil(layout.pages/layout.columns)}, ${layout.height})`,
     width : '100%',
     height : '100%',
   }

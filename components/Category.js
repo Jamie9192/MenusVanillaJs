@@ -1,9 +1,7 @@
 import { createElement } from '../functions/elementCreate.js';
-
 import { Dish } from './Dish.js';
 
 const CategoryHeader = (label, styling) => {
-
   const div = createElement('div', styling.categoryHeader);
   const nameDiv = createElement('div', styling.categoryName);
 
@@ -25,11 +23,9 @@ const CategoryDescription = (description, styling) => {
 }
 
 
-export const Category = (label, data, styling) => {
-
-  styling.category.width = styling.layout.colElWidth || "100%";
-
+export const Category = (label, data, styling, layout) => {
   const div = createElement('div', styling.category, 'category');
+  div.style.width = styling.layout.colElWidth || "100%";
 
   const header = CategoryHeader(label, styling);
   div.append(header);

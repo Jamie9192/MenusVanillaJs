@@ -15,15 +15,6 @@ body {
   min-width: 100%;
   min-height: 100%;
   background-color: rgb(28, 27, 27);
-  padding: 2rem;
-}
-
-.page {
-  width: 210mm;
-  height: 297mm;
-  padding: 3mm;
-  overflow: hidden;
-  page-break-after: always;
 }
 
 @font-face {

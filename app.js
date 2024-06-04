@@ -1,4 +1,4 @@
-const business = "Vinos";
+const business = "Porto";
 
 import { calculateWidthFlex } from '../functions/calculate.js';
 
@@ -33,6 +33,21 @@ const LoadMenu = (restaurant) => {
   const { layout, colorPalette, styling, menu } = restaurant;
   const { pages } = layout;
 
+  let stlyeStr = "<style>"
+  // create classes from styling keys and values
+  Object.entries(styling).forEach(([key, value]) => {
+    stlyeStr += `.${key} {`
+    Object.entries(value).forEach(([k, v]) => {
+     //need to split these by uppercase and add a -
+      const split = k.split(/(?=[A-Z])/).join('-').toLowerCase()
+      stlyeStr += `${split}:${v};`
+    })
+    stlyeStr += `}`
+  })
+  stlyeStr += "</style>"
+
+  document.head.insertAdjacentHTML('beforeend', stlyeStr)
+
   document.documentElement.style.fontSize = layout.baseFontSize || '16px';
 
   if (colorPalette) {
@@ -45,12 +60,12 @@ const LoadMenu = (restaurant) => {
 
 
   for (let i = 0; i < pages; i++) {
-    const page = Page(styling, pagesContainer)
+    const page = Page(layout, styling, pagesContainer)
     pageArray.push(page)
   }
-  console.log(styling)
+
   styling.layout = styling.layout || {}
-  styling.layout.colElWidth = calculateWidthFlex(layout.colsPerPage || 1)
+  styling.layout.colElWidth = calculateWidthFlex(layout.width, styling.page.gap, layout.colsPerPage || 1)
 
   const logo = Logo(business, restaurant.logo, styling)
   AddToPage(logo)

@@ -1,0 +1,500 @@
+{
+  "logo": "Porto.svg",
+  "layout": {
+    "pages": 4,
+    "columns": 2,
+    "baseFontSize": "20px",
+    "colsPerPage": 3,
+    "width": "420mm",
+    "height": "297mm"
+  },
+  "colorPalette": {
+    "primary": "#0c1e4d",
+    "secondary": "#000000",
+    "background": "white",
+    "text": "#FFFFFF",
+    "off-white": "#BBBBBB"
+  },
+  "styling": {
+    "logoContainer" : {
+      "width" : "100%",
+      "height" : "40mm"
+    },
+    "logo" : {
+      "width" : "100%",
+      "height" : "100%",
+      "object-fit" : "contain",
+      "backgroundColor" : "white",
+      "padding" : "3mm",
+      "borderRadius" : "0.5rem"
+    },
+    "category": {
+      "backgroundColor": "rgba(255,255,255,0.6)",
+      "color": "var(--clr-primary)",
+      "display": "flex",
+      "flexDirection": "column",
+      "margin": "2mm",
+      "padding": "0.5rem",
+      "borderRadius": "0.5rem",
+      "backdropFilter": "blur(0.25rem)",
+      "overflow": "hidden"
+    },
+    "categoryHeader": {
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "backgroundColor": "var(--clr-primary)",
+      "alignItems": "center",
+      "borderRadius": "0.25rem"
+    },
+    "categoryName": {
+      "color": "white ",
+      "width": "100%",
+      "fontSize": "1.25rem",
+      "textAlign": "center",
+      "fontWeight": "bold"
+    },
+    "categoryPrice": {
+      "color": "var(--clr-primary)"
+    },
+    "categoryDescription": {
+      "color": "var(--clr-primary)",
+      "textAlign": "center",
+      "fontSize": "1.1rem"
+    },
+    "dishContainer": {
+      "display": "grid",
+      "gridTemplateColumns": "repeat(1, 1fr)",
+      "gap": "0.25rem 1rem",
+      "padding": "0.5rem",
+      "maxWidth": "100%",
+      "boxSizing": "border-box"
+    },
+    "dish": {
+      "backgroundColor": "transparent",
+      "width": "100%",
+      "display": "grid",
+      "gap": 0,
+      "gridTemplateRows": "subgrid",
+      "gridRow": "span 3"
+    },
+    "dishHeader": {
+      "display": "grid",
+      "gridTemplateColumns": "1fr auto",
+      "gridTemplateRows": "auto auto",
+      "alignItems": "start",
+      "height": "min-content"
+    },
+    "dishName": {
+      "color": "var(--clr-primary))",
+      "textTransform": "uppercase",
+      "fontSize": "0.9rem",
+      "fontWeight": "bolder",
+      "gridRow": "1"
+    },
+    "dishPrice": {
+      "color": "var(--clr-primary)",
+      "float": "right",
+      "paddingLeft": "0.5rem"
+    },
+    "dishDescription": {
+      "color": "var(--clr-primary)",
+      "fontSize": "0.8rem",
+      "gridRow": "3/3",
+      "display": "flex",
+      "justifyContent": "space-between",
+      "flexWrap": "wrap"
+    },
+    "dietary": {
+      "color": "var(--clr-primary)",
+      "fontSize": "0.5rem",
+      "gridRow": "2/2"
+    },
+    "page": {
+      "padding": "clamp(6mm, 2rem, 100%)",
+      "display": "flex",
+      "flexDirection": "column",
+      "gap": "1mm",
+      "flexWrap": "wrap",
+      "backgroundColor": "var(--clr-background)",
+      "overflow": "hidden",
+      "alignItems": "center",
+      "pageBreakAfter": "always",
+      "backgroundImage": "url('assets/Porto/background.jpg')",
+      "backgroundSize": "cover",
+      "backgroundPosition": "center",
+      "backgroundRepeat": "no-repeat"
+    },
+    "pages": {
+      "display": "grid",
+      "placeItems": "center",
+      "gap": "0",
+      "margin": "0 auto"
+    }
+  },
+
+  "menu": {
+    "Breakfast": {
+      "description": "Served til 1pm",
+      "dishes": {
+        "Full Scottish": {
+          "price": 6,
+          "description": "Square sausage, egg, beans, potato scone, black pudding and bacon."
+        },
+        "Full Breakfast Wrap": {
+          "price": 6,
+          "description": "Sausage, egg, beans, potato scone, black pudding, bacon and hash brown."
+        },
+        "Breakfast Roll": {
+          "price": 2,
+          "description": "Choose from sausage, bacon, black pudding, potato scone, fried egg or scrambled egg."
+        },
+        "Doubler": {
+          "price": 2.5,
+          "description": "Choose two fillings from sausage, bacon, black pudding, potato scone, fried egg or scrambled egg."
+        }
+      }
+    },
+    "Cold Rolls": {
+      "description": "Comes with lettuce, tomatos and onions. Add cheese for 50p.",
+      "dishes": {
+        "Chicken Tikka": {
+          "price": 2.5
+        },
+        "Chicken Mayo": {
+          "price": 2.5
+        },
+        "Tuna Mayo": {
+          "price": 2.5
+        },
+        "Ham Salad": {
+          "price": 2.5
+        },
+        "Chicken Roll": {
+          "price": 2
+        },
+        "Corned Beef": {
+          "price": 2.5
+        },
+        "Cheese Salad": {
+          "price": 2,
+          "dietary": ["vegetarian"]
+        },
+        "Cheese Savoury": {
+          "price": 2.5,
+          "dietary": ["vegetarian"]
+        },
+        "Egg Mayo": {
+          "price": 2.5,
+          "dietary": ["vegetarian"]
+        }
+      }
+    },
+    "Wraps": {
+      "description": "Add chips for £1.50.",
+      "dishes": {
+        "Mexican Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, lettuce and red onion."
+        },
+        "Italian Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, lettuce, red onion and mayo."
+        },
+        "Ham & Cheese": {
+          "price": 4.5
+        },
+        "Buffalo Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, red onion, peppers and buffalo sauce."
+        },
+        "BBQ Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, red onion, and BBQ sauce."
+        },
+        "Chicken Fajita": {
+          "price": 4.5,
+          "description": "Chicken, cheese, red onion, peppers and tomato sauce."
+        },
+        "Salt & Chilli Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, peppers and salt & chilli flakes and curry sauce."
+        },
+        "Sweet Chilli Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, sweet chilli sauce."
+        }
+      }
+    },
+    "Paninis": {
+      "description": "Add chips for £1.50.",
+      "dishes": {
+        "Mexican Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, lettuce and red onion."
+        },
+        "Italian Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, lettuce, red onion and mayo."
+        },
+        "Ham & Cheese": {
+          "price": 4.5
+        },
+        "Buffalo Chicken": {
+          "price": 4.5,
+          "description": "Chicken, cheese, red onion, peppers and buffalo sauce."
+        },
+        "Mozza, Tomato & Pesto": {
+          "price": 4.5,
+          "description": "Mozzarella, tomato and pesto.",
+          "dietary": ["vegetarian"]
+        },
+        "Tuna Mayo": {
+          "price": 4.5,
+          "description": "Tuna, cheese, red onion and mayo."
+        }
+      }
+    },
+    "Starters": {
+      "description": "Includes choice of dip.",
+      "dishes": {
+        "Homemade Soup": {
+          "price": 2.5,
+          "description": "Soup of the day (please ask)."
+        },
+        "Mozzarella Sticks": {
+          "price": 5.5,
+          "description": "Mozzarella dipped in breadcrumbs.",
+          "dietary": ["vegetarian"]
+        },
+        "Garlic Bread": {
+          "price": 4.5,
+          "description": "10\" Garlic pizza bread with a generous amount of garlic butter, topped with parsley.",
+          "dietary": ["vegetarian"]
+        },
+        "Large Garlic Bread": {
+          "price": 6,
+          "description": "12\" Garlic pizza bread with a generous amount of garlic butter, topped with parsley. Add cheese for £1.",
+          "dietary": ["vegetarian"]
+        },
+        "Onion Rings": {
+          "price": 5,
+          "dietary": ["vegan"]
+        },
+        "Potato Wedges": {
+          "price": 5.5,
+          "dietary": ["vegan"]
+        },
+        "Sweet Potato Fries": {
+          "price": 3.5,
+          "dietary": ["vegan"]
+        }
+      }
+    },
+    "Pizza": {
+      "dishes": {
+        "Margherita": {
+          "price": 6.5,
+          "description": "The original. Based on the colours of the Italian flag. Tomato, cheese and basil.",
+          "dietary": ["vegetarian"]
+        },
+        "Pepperoni": {
+          "price": 7,
+          "description": "The family favourite. Original pizza, topped with slices of pepperoni."
+        },
+        "Spicy Chicken": {
+          "price": 7,
+          "description": "Diced and spiced chicken."
+        },
+        "Vegetarian": {
+          "price": 7,
+          "description": "Onions, peppers, mushrooms and sweetcorn. Eco friendly.",
+          "dietary": ["vegetarian"]
+        },
+        "Ham & Mushroom": {
+          "price": 7,
+          "description": "Sliced and chopped ham with sliced mushrooms."
+        }
+      }
+    },
+    "Calzone": {
+      "dishes": {
+        "Margherita": {
+          "price": 6.5,
+          "description": "The original. Based on the colours of the Italian flag. Tomato, cheese and basil.",
+          "dietary": ["vegetarian"]
+        },
+        "Speciale": {
+          "price": 8,
+          "description": "Pepperoni, chicken, pancetta, tomato and cheese."
+        },
+        "Pollo Speziato": {
+          "price": 7.5,
+          "description": "Spicy chicken, tomato and cheese."
+        }
+      }
+    },
+    "Burgers": {
+      "description": "Add chips for £1.50.",
+      "dishes": {
+        "Beef Burger": {
+          "price": 4,
+          "description": "Beef burger, lettuce, onion, tomato and mayo."
+        },
+        "Cheese Burger": {
+          "price": 4.5,
+          "description": "Beef burger, cheese, lettuce, onion, tomato and mayo."
+        },
+        "Chicken Burger": {
+          "price": 4.5,
+          "description": "Chicken burger, cheese, lettuce, onion, tomato and mayo."
+        }
+      }
+    },
+    "Chips": {
+      "dishes": {
+        "Chips": {
+          "price": 2.5,
+          "dietary": ["vegan"]
+        },
+        "Chips & Cheese": {
+          "price": 3,
+          "dietary": ["vegetarian"]
+        },
+        "Chips & Curry": {
+          "price": 3,
+          "dietary": ["vegetarian"]
+        },
+        "Chips & Gravy": {
+          "price": 3
+        },
+        "Chicken Curry & Chips": {
+          "price": 7
+        }
+      }
+    },
+    "Dips": {
+      "dishes": {
+        "Mayo": {
+          "price": 0.8,
+          "dietary": ["vegetarian"]
+        },
+        "Sweet Chilli": {
+          "price": 0.8,
+          "dietary": ["vegan"]
+        },
+        "Chipotle": {
+          "price": 0.8
+        },
+        "BBQ": {
+          "price": 0.8,
+          "dietary": ["vegetarian"]
+        },
+        "Garlic Mayo": {
+          "price": 0.8,
+          "dietary": ["vegetarian"]
+        }
+      }
+    },
+    "Drinks": {
+      "dishes": {
+        "Cans": {
+          "price": 1.2
+        },
+        "Water": {
+          "price": 1
+        }
+      }
+    },
+    "Coffee": {
+      "description": "Add syrup for 50p.",
+      "dishes": {
+        "Tea": {
+          "price": 1.8
+        },
+        "Cortado": {
+          "price": 2.4
+        },
+        "Double Espresso": {
+          "price": 2.4
+        },
+        "Latte": {
+          "price": 2.4
+        },
+        "Cappuccino": {
+          "price": 2.4
+        },
+        "Hot Chocolate": {
+          "price": 2.4
+        }
+      }
+    },
+    "Deals": {
+      "dishes": {
+        "1/2 Pizza & Chips": {
+          "price": 6,
+          "description": "Any half pizza and chips.",
+          "dietary": ["vegetarianAvailable"]
+        },
+        "School Kids": {
+          "price": 3.5,
+          "description": "Slice of pizza, chips and a can. <br>For school kids only, between 12pm and 2pm.",
+          "dietary": ["vegetarianAvailable"]
+        }
+      }
+    },
+    "Specials": {
+      "dishes": {
+        "Haggis, Neeps & Tatties": {
+          "price": 6,
+          "description": "Haggis, neeps and tatties with a whisky sauce."
+        },
+        "Macaroni Cheese": {
+          "price": 6,
+          "description": "Macaroni pasta in a creamy cheese sauce."
+        },
+        "Fish & Chips": {
+          "price": 6,
+          "description": "Battered fish with chips and peas."
+        },
+        "Chicken Goujons": {
+          "price": 6,
+          "description": "Breaded chicken goujons with chips and beans."
+        },
+        "Steak Pie": {
+          "price": 6,
+          "description": "Steak pie with chips and peas."
+        },
+        "Chicken Curry": {
+          "price": 6,
+          "description": "Chicken curry with rice and naan bread."
+        }
+      }
+    },
+    "Kids": {
+      "dishes": {
+        "Kids Pizza": {
+          "price": 3,
+          "description": "Cheese and tomato pizza."
+        },
+        "Kids Pasta": {
+          "price": 3,
+          "description": "Pasta in a tomato sauce."
+        },
+        "Kids Chicken Goujons": {
+          "price": 3,
+          "description": "Breaded chicken goujons."
+        },
+        "Kids Fish Fingers": {
+          "price": 3,
+          "description": "Fish fingers."
+        },
+
+        "Kids Sausage": {
+          "price": 3,
+          "description": "Sausage."
+        }
+      }
+    }
+  }
+}
